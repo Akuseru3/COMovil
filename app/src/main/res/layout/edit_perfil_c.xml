@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    tools:context=".CarryOn.VistaCliente.EditPerfilC">
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_x="4dp"
+            android:layout_y="3dp"
+            android:background="@drawable/small_lay_custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/pop_med"
+            android:text="Editar perfil"
+            android:textColor="#424242"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="33dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#f5f5f5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:id="@+id/textContra4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Repetir nueva contraseña"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            app:fontFamily="@font/pop_light"
+            app:layout_constraintStart_toStartOf="@+id/editTextPass"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPass" />
+
+        <EditText
+            android:id="@+id/editTextPass4"
+            android:layout_width="286dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/textContra"
+            android:background="@drawable/round_txt"
+            android:ems="10"
+            android:fontFamily="@font/pop_light"
+            android:inputType="textPassword"
+            android:paddingLeft="8dp"
+            android:textColor="#424242"
+            android:textColorHint="#727272"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/textContra4"
+            app:layout_constraintTop_toBottomOf="@+id/textContra4"
+            tools:layout_conversion_absoluteHeight="32dp"
+            tools:layout_conversion_absoluteWidth="370dp" />
+
+        <TextView
+            android:id="@+id/textNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Nombre"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            app:fontFamily="@font/pop_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <EditText
+            android:id="@+id/editTextNombre"
+            android:layout_width="286dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/textNombre"
+            android:background="@drawable/round_txt"
+            android:ems="10"
+            android:fontFamily="@font/pop_light"
+            android:inputType="textPersonName"
+            android:paddingLeft="8dp"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/textNombre"
+            app:layout_constraintTop_toBottomOf="@+id/textNombre"
+            tools:layout_conversion_absoluteHeight="32dp"
+            tools:layout_conversion_absoluteWidth="370dp" />
+
+        <TextView
+            android:id="@+id/textApellidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextNombre"
+            android:layout_marginTop="8dp"
+            android:text="Apellidos"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            app:fontFamily="@font/pop_light"
+            app:layout_constraintStart_toStartOf="@+id/textNombre"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNombre" />
+
+        <EditText
+            android:id="@+id/editTextApellidos"
+            android:layout_width="286dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/textApellidos"
+            android:background="@drawable/round_txt"
+            android:ems="10"
+            android:fontFamily="@font/pop_light"
+            android:inputType="textPersonName"
+            android:paddingLeft="8dp"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/textApellidos"
+            app:layout_constraintTop_toBottomOf="@+id/textApellidos"
+            tools:layout_conversion_absoluteHeight="32dp"
+            tools:layout_conversion_absoluteWidth="370dp" />
+
+        <TextView
+            android:id="@+id/textFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextApellidos"
+            android:layout_marginTop="8dp"
+            android:text="Fecha de Nacimiento"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            app:fontFamily="@font/pop_light"
+            app:layout_constraintStart_toStartOf="@+id/textApellidos"
+            app:layout_constraintTop_toBottomOf="@+id/editTextApellidos" />
+
+        <EditText
+            android:id="@+id/editTextD"
+            android:layout_width="82dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/textFecha"
+            android:background="@drawable/round_txt"
+            android:ems="10"
+            android:fontFamily="@font/pop_light"
+            android:hint="Día"
+            android:inputType="number"
+            android:paddingLeft="14dp"
+            android:textColor="#424242"
+            android:textColorHint="#727272"
+            app:layout_constraintStart_toStartOf="@+id/textFecha"
+            app:layout_constraintTop_toBottomOf="@+id/textFecha" />
+
+        <EditText
+            android:id="@+id/editTextM"
+            android:layout_width="82dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/textFecha"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toRightOf="@id/editTextD"
+            android:background="@drawable/round_txt"
+            android:ems="10"
+            android:fontFamily="@font/pop_light"
+            android:hint="Mes"
+            android:inputType="number"
+            android:paddingLeft="14dp"
+            android:textColor="#424242"
+            android:textColorHint="#727272"
+            app:layout_constraintEnd_toStartOf="@+id/editTextA"
+            app:layout_constraintStart_toEndOf="@+id/editTextD"
+            app:layout_constraintTop_toBottomOf="@+id/textFecha" />
+
+        <EditText
+            android:id="@+id/editTextA"
+            android:layout_width="82dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/textFecha"
+            android:layout_toRightOf="@id/editTextM"
+            android:background="@drawable/round_txt"
+            android:ems="10"
+            android:fontFamily="@font/pop_light"
+            android:hint="Año"
+            android:inputType="number"
+            android:paddingLeft="14dp"
+            android:textColor="#424242"
+            android:textColorHint="#727272"
+            app:layout_constraintEnd_toEndOf="@+id/editTextApellidos"
+            app:layout_constraintTop_toBottomOf="@+id/textFecha" />
+
+        <TextView
+            android:id="@+id/textTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextD"
+            android:layout_marginTop="8dp"
+            android:text="Teléfono"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            app:fontFamily="@font/pop_light"
+            app:layout_constraintStart_toStartOf="@+id/textFecha"
+            app:layout_constraintTop_toBottomOf="@+id/editTextD" />
+
+        <EditText
+            android:id="@+id/editTextTelefono"
+            android:layout_width="286dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/textTelefono"
+            android:background="@drawable/round_txt"
+            android:ems="10"
+            android:fontFamily="@font/pop_light"
+            android:inputType="number"
+            android:paddingLeft="8dp"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/textTelefono"
+            app:layout_constraintTop_toBottomOf="@+id/textTelefono"
+            tools:layout_conversion_absoluteHeight="32dp"
+            tools:layout_conversion_absoluteWidth="370dp" />
+
+        <TextView
+            android:id="@+id/textContra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Nueva contraseña"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            app:fontFamily="@font/pop_light"
+            app:layout_constraintStart_toStartOf="@+id/textContra3"
+            app:layout_constraintTop_toBottomOf="@+id/btnCodeMail" />
+
+        <TextView
+            android:id="@+id/textContra3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Codigo"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            app:fontFamily="@font/pop_light"
+            app:layout_constraintStart_toStartOf="@+id/editTextTelefono"
+            app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+        <EditText
+            android:id="@+id/editTextPass"
+            android:layout_width="286dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/textContra"
+            android:background="@drawable/round_txt"
+            android:ems="10"
+            android:fontFamily="@font/pop_light"
+            android:inputType="textPassword"
+            android:paddingLeft="8dp"
+            android:textColor="#424242"
+            android:textColorHint="#727272"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/textContra"
+            app:layout_constraintTop_toBottomOf="@+id/textContra"
+            tools:layout_conversion_absoluteHeight="32dp"
+            tools:layout_conversion_absoluteWidth="370dp" />
+
+        <Button
+            android:id="@+id/btnModPass"
+            android:layout_width="286dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/round_btn_grn"
+            android:fontFamily="@font/pop_med"
+            android:text="Modificar"
+            android:textAllCaps="false"
+            android:textColor="#424242"
+            app:layout_constraintStart_toStartOf="@+id/editTextPass4"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPass4" />
+
+        <Button
+            android:id="@+id/btnCodeMail"
+            android:layout_width="286dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/round_btn_ingrey"
+            android:fontFamily="@font/pop_med"
+            android:alpha=".8"
+            android:text="Enviar al correo"
+            android:textAllCaps="false"
+            android:textColor="#69f0ae"
+            app:layout_constraintStart_toStartOf="@+id/editTextCode"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCode" />
+
+        <Button
+            android:id="@+id/btnModGen"
+            android:layout_width="286dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round_btn_grn"
+            android:fontFamily="@font/pop_med"
+            android:text="Actualizar"
+            android:textAllCaps="false"
+            android:textColor="#424242"
+            app:layout_constraintStart_toStartOf="@+id/editTextTelefono"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTelefono" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/pop_med"
+            android:text="Información general"
+            android:textColor="#424242"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/pop_med"
+            android:text="Modificar contraseña"
+            android:textColor="#424242"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnModGen" />
+
+        <EditText
+            android:id="@+id/editTextCode"
+            android:layout_width="286dp"
+            android:layout_height="30dp"
+            android:background="@drawable/round_txt"
+            android:ems="10"
+            android:fontFamily="@font/pop_light"
+            android:inputType="textPersonName"
+            android:paddingLeft="8dp"
+            android:textColor="#424242"
+            android:textColorHint="#727272"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/textContra3"
+            app:layout_constraintTop_toBottomOf="@+id/textContra3" />
+    </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

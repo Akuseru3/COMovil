@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipos_cuentas">
+        <item>Cliente</item>
+        <item>Transportista</item>
+    </string-array>
+</resources>

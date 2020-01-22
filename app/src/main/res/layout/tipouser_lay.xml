@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/absoluteLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:focusableInTouchMode="true">
+
+    <Button
+        android:id="@+id/btnContReg"
+        android:layout_width="260dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="48dp"
+        android:layout_x="50dp"
+        android:layout_y="541dp"
+        android:background="@drawable/round_btn_grn"
+        android:fontFamily="@font/pop_med"
+        android:text="Continuar"
+        android:textAllCaps="false"
+        android:textColor="#424242"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/btnTipoT"
+        app:layout_constraintTop_toBottomOf="@+id/btnTipoT" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_x="45dp"
+        android:layout_y="77dp"
+        android:text="Tipo de cuenta"
+        android:textColor="#424242"
+        android:textSize="20sp"
+        app:fontFamily="@font/pop_med"
+        app:layout_constraintStart_toEndOf="@+id/btnGoMain"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="45dp"
+        tools:layout_conversion_absoluteWidth="390dp" />
+
+    <Button
+        android:id="@+id/btnTipoC"
+        android:layout_width="260dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:layout_x="53dp"
+        android:layout_y="136dp"
+        android:background="@drawable/round_btn_grey_thicc"
+        android:fontFamily="@font/pop_bold"
+        android:text="CLIENTE"
+        android:textColor="#424242"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/btnTipoT"
+        android:layout_width="260dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="52dp"
+        android:layout_x="51dp"
+        android:layout_y="334dp"
+        android:background="@drawable/round_btn_grey_thicc"
+        android:fontFamily="@font/pop_bold"
+        android:text="TRANSPORTISTA"
+        android:textColor="#424242"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/btnTipoC"
+        app:layout_constraintTop_toBottomOf="@+id/btnTipoC" />
+
+    <ImageButton
+        android:id="@+id/btnGoMain"
+        android:layout_width="33dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="#f5f5f5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+</android.support.constraint.ConstraintLayout>

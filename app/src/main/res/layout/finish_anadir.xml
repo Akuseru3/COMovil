@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_x="4dp"
+        android:layout_y="3dp"
+        android:background="@drawable/small_lay_custom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/pop_med"
+        android:text="Procesar pedido"
+        android:textColor="#424242"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/imageButton9"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="33dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#f5f5f5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="566dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/btnAgregar2"
+            android:layout_width="311dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:layout_x="122dp"
+            android:layout_y="516dp"
+            android:background="@drawable/round_btn_grn"
+            android:fontFamily="@font/pop_med"
+            android:text="Crear pedido"
+            android:textAllCaps="false"
+            android:textColor="#424242"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textTrans2"
+            app:layout_constraintTop_toBottomOf="@+id/textTrans2"
+            app:layout_constraintVertical_bias="0.647" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="311dp"
+            android:layout_height="169dp"
+            android:layout_x="12dp"
+            android:layout_y="304dp"
+            android:background="@drawable/rect_txt"
+            app:layout_constraintStart_toStartOf="@+id/textView49"
+            app:layout_constraintTop_toBottomOf="@+id/textView49" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="306dp"
+            android:layout_height="164dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_x="16dp"
+            android:layout_y="310dp"
+            android:scrollbars="vertical"
+            app:layout_constraintStart_toStartOf="@+id/textView40"
+            app:layout_constraintTop_toTopOf="@+id/textView40">
+
+            <LinearLayout
+                android:id="@+id/txtPedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <TextView
+            android:id="@+id/textView49"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_x="16dp"
+            android:layout_y="285dp"
+            android:gravity="center"
+            android:text="Pedido actual"
+            android:textColor="#424242"
+            android:textSize="14sp"
+            app:fontFamily="@font/pop_light"
+            app:layout_constraintStart_toStartOf="@+id/extraInfo5"
+            app:layout_constraintTop_toBottomOf="@+id/extraInfo5" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_x="14dp"
+            android:layout_y="451dp"
+            android:gravity="center"
+            android:text="Transportista"
+            android:textColor="#424242"
+            android:textSize="14sp"
+            app:fontFamily="@font/pop_light"
+            app:layout_constraintStart_toStartOf="@+id/textView49"
+            app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+        <TextView
+            android:id="@+id/textTrans2"
+            android:layout_width="254dp"
+            android:layout_height="24dp"
+            android:background="@drawable/round_txtwh_stroke"
+            android:fontFamily="@font/pop_light"
+            android:paddingLeft="10dp"
+            android:text="Buscar nuevo"
+            android:textColor="#424242"
+            app:layout_constraintStart_toStartOf="@+id/textView28"
+            app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+        <ImageButton
+            android:id="@+id/btnFavoritos2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_x="292dp"
+            android:layout_y="467dp"
+            android:background="#f5f5f5"
+            app:layout_constraintStart_toEndOf="@+id/textTrans2"
+            app:layout_constraintTop_toTopOf="@+id/textView28"
+            app:srcCompat="@drawable/lib" />
+
+        <TextView
+            android:id="@+id/textNombre11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_x="18dp"
+            android:layout_y="51dp"
+            android:gravity="center"
+            android:text="Nombre del pedido"
+            android:textColor="#424242"
+            android:textSize="14sp"
+            app:fontFamily="@font/pop_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtNombre6"
+            android:layout_width="311dp"
+            android:layout_height="24dp"
+            android:layout_x="17dp"
+            android:layout_y="73dp"
+            android:background="@drawable/round_txtwh_stroke"
+            android:ems="10"
+            android:fontFamily="@font/pop_light"
+            android:inputType="textPersonName"
+            android:paddingLeft="6dp"
+            android:textColor="#424242"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/textNombre11"
+            app:layout_constraintTop_toBottomOf="@+id/textNombre11" />
+
+        <TextView
+            android:id="@+id/textViewDir9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_x="18dp"
+            android:layout_y="104dp"
+            android:gravity="center"
+            android:text="Dirección del pedido"
+            android:textColor="#424242"
+            android:textSize="14sp"
+            app:fontFamily="@font/pop_light"
+            app:layout_constraintStart_toStartOf="@+id/txtNombre6"
+            app:layout_constraintTop_toBottomOf="@+id/txtNombre6" />
+
+        <TextView
+            android:id="@+id/twLocale5"
+            android:layout_width="194dp"
+            android:layout_height="58dp"
+            android:background="@drawable/round_txtwh_stroke"
+            android:fontFamily="@font/pop_light"
+            android:paddingLeft="6dp"
+            android:text="Sin definir"
+            android:textColor="#424242"
+            app:layout_constraintStart_toStartOf="@+id/textViewDir9"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDir9" />
+
+        <Button
+            android:id="@+id/btnMapSel5"
+            android:layout_width="105dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/round_btn_grn"
+            android:fontFamily="@font/pop_med"
+            android:text="Seleccionar"
+            android:textAllCaps="false"
+            android:textColor="#424242"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/twLocale5"
+            app:layout_constraintTop_toTopOf="@+id/twLocale5" />
+
+        <TextView
+            android:id="@+id/textViewDir10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_x="18dp"
+            android:layout_y="104dp"
+            android:gravity="center"
+            android:text="Señales extras"
+            android:textColor="#424242"
+            android:textSize="14sp"
+            app:fontFamily="@font/pop_light"
+            app:layout_constraintStart_toStartOf="@+id/twLocale5"
+            app:layout_constraintTop_toBottomOf="@+id/twLocale5" />
+
+        <EditText
+            android:id="@+id/extraInfo5"
+            android:layout_width="311dp"
+            android:layout_height="58dp"
+            android:background="@drawable/round_txtwh_stroke"
+            android:ems="10"
+            android:fontFamily="@font/pop_light"
+            android:gravity="top|left"
+            android:hint="Opcional"
+            android:inputType="textMultiLine"
+            android:paddingLeft="6dp"
+            android:scrollbars="vertical"
+            android:textColor="#424242"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewDir10"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDir10" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

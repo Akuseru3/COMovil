@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CarryOn.VistaCliente.ValoracionC">
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"/>
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/small_lay_custom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_x="4dp"
+        android:layout_y="3dp"
+        android:background="#f5f5f5"
+        android:backgroundTint="#f5f5f5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_x="44dp"
+        android:layout_y="43dp"
+        android:gravity="center"
+        android:text="Retroalimentación"
+        android:textColor="#424242"
+        android:textSize="18sp"
+        app:fontFamily="@font/pop_med"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="45dp"
+        tools:layout_conversion_absoluteWidth="390dp" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/pop_med"
+        android:text="Nombre del transportista"
+        android:textColor="#424242"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="33dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#f5f5f5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:fontFamily="@font/pop_light"
+        android:text="Nombre del pedido"
+        app:layout_constraintStart_toStartOf="@+id/textView33"
+        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:background="#f5f5f5"
+        android:backgroundTint="#f5f5f5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView38">
+
+        <ImageButton
+            android:id="@+id/star1"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:background="#f5f5f5"
+            android:backgroundTint="#f5f5f5"
+            app:layout_constraintStart_toStartOf="@+id/textView34"
+            app:layout_constraintTop_toTopOf="@+id/textView34"
+            app:srcCompat="@drawable/star1" />
+
+        <ImageButton
+            android:id="@+id/star2"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="#f5f5f5"
+            android:backgroundTint="#f5f5f5"
+            app:layout_constraintStart_toEndOf="@+id/star1"
+            app:layout_constraintTop_toTopOf="@+id/star1"
+            app:srcCompat="@drawable/star1" />
+
+        <ImageButton
+            android:id="@+id/star3"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="#f5f5f5"
+            android:backgroundTint="#f5f5f5"
+            app:layout_constraintStart_toEndOf="@+id/star2"
+            app:layout_constraintTop_toTopOf="@+id/star2"
+            app:srcCompat="@drawable/star1" />
+
+        <ImageButton
+            android:id="@+id/star5"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="#f5f5f5"
+            android:backgroundTint="#f5f5f5"
+            app:layout_constraintStart_toEndOf="@+id/star4"
+            app:layout_constraintTop_toTopOf="@+id/star4"
+            app:srcCompat="@drawable/star1" />
+
+        <ImageButton
+            android:id="@+id/star4"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="#f5f5f5"
+            android:backgroundTint="#f5f5f5"
+            app:layout_constraintStart_toEndOf="@+id/star3"
+            app:layout_constraintTop_toTopOf="@+id/star3"
+            app:srcCompat="@drawable/star1" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="34dp"
+            android:fontFamily="@font/pop_light"
+            android:text="Valora al transportista"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/pop_light"
+            android:text="Escribe un comentario"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/textView34"
+            app:layout_constraintTop_toBottomOf="@+id/star1" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="300dp"
+            android:layout_height="123dp"
+            android:background="@drawable/round_txt"
+            android:ems="10"
+            android:fontFamily="@font/pop_light"
+            android:gravity="top|left"
+            android:hint="Opcional"
+            android:inputType="textMultiLine"
+            android:paddingLeft="10dp"
+            android:scrollbars="vertical"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/textView35"
+            app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="300dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="44dp"
+            android:background="#808080"
+            android:fontFamily="@font/pop_bold"
+            android:text="Agregar a favoritos"
+            android:textAllCaps="false"
+            android:textColor="@color/lightColor"
+            app:layout_constraintStart_toStartOf="@+id/editText"
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="300dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/lightColor"
+            android:fontFamily="@font/pop_bold"
+            android:text="Aceptar"
+            android:textAllCaps="false"
+            android:textColor="@color/offColor"
+            app:layout_constraintStart_toStartOf="@+id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

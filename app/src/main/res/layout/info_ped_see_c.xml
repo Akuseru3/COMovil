@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/absLayP"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:focusableInTouchMode="true">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/swAddp"
+            android:layout_width="match_parent"
+            android:layout_height="512dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            tools:layout_editor_absoluteX="0dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+                <TextView
+                    android:id="@+id/textView45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pop_light"
+                    android:text="00"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/textNombre9"
+                    app:layout_constraintTop_toBottomOf="@+id/textNombre9" />
+
+                <TextView
+                    android:id="@+id/textView46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pop_light"
+                    android:text="00"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/textNombre8"
+                    app:layout_constraintTop_toBottomOf="@+id/textNombre8" />
+
+                <ImageView
+                    android:id="@+id/IVstar"
+                    android:layout_width="17dp"
+                    android:layout_height="16dp"
+                    android:layout_x="159dp"
+                    android:layout_y="226dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toEndOf="@+id/textView45"
+                    app:layout_constraintTop_toBottomOf="@+id/textNombre9"
+                    app:srcCompat="@drawable/ic_star_solid" />
+
+                <ImageView
+                    android:id="@+id/IVstar2"
+                    android:layout_width="17dp"
+                    android:layout_height="16dp"
+                    android:layout_x="159dp"
+                    android:layout_y="226dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toEndOf="@+id/textView46"
+                    app:layout_constraintTop_toBottomOf="@+id/textNombre8"
+                    app:srcCompat="@drawable/ic_star_solid" />
+
+                <EditText
+                    android:id="@+id/extraInfo"
+                    android:layout_width="311dp"
+                    android:layout_height="58dp"
+                    android:background="@drawable/round_txt"
+                    android:ems="10"
+                    android:fontFamily="@font/pop_light"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="6dp"
+                    android:scrollbars="vertical"
+                    android:text="Señales brindadas por el cliente"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/textViewDir2"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDir2" />
+
+                <TextView
+                    android:id="@+id/textViewDir2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_x="18dp"
+                    android:layout_y="104dp"
+                    android:gravity="center"
+                    android:text="Señales extras"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/twLocale"
+                    app:layout_constraintTop_toBottomOf="@+id/twLocale" />
+
+                <TextView
+                    android:id="@+id/twLocale"
+                    android:layout_width="194dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/round_txt"
+                    android:fontFamily="@font/pop_light"
+                    android:paddingLeft="6dp"
+                    android:text="Dirección del pedido"
+                    android:textColor="#424242"
+                    app:layout_constraintStart_toStartOf="@+id/textViewDir"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDir" />
+
+                <Button
+                    android:id="@+id/btnMapSel2"
+                    android:layout_width="105dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/round_btn_grn"
+                    android:fontFamily="@font/pop_med"
+                    android:text="Ver en el mapa"
+                    android:textAllCaps="false"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/twLocale"
+                    app:layout_constraintTop_toTopOf="@+id/twLocale" />
+
+                <TextView
+                    android:id="@+id/textNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_x="18dp"
+                    android:layout_y="51dp"
+                    android:gravity="center"
+                    android:text="Nombre del pedido"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textNombre2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="18dp"
+                    android:layout_y="51dp"
+                    android:gravity="center"
+                    android:text="Pedido 1"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/textNombre"
+                    app:layout_constraintTop_toBottomOf="@+id/textNombre" />
+
+                <TextView
+                    android:id="@+id/textNombre3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="18dp"
+                    android:layout_y="51dp"
+                    android:gravity="center"
+                    android:text="Trans1"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/textNombre4"
+                    app:layout_constraintTop_toBottomOf="@+id/textNombre4" />
+
+                <TextView
+                    android:id="@+id/textNombre4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_x="18dp"
+                    android:layout_y="51dp"
+                    android:gravity="center"
+                    android:text="Nombre del transportista"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/textNombre2"
+                    app:layout_constraintTop_toBottomOf="@+id/textNombre2" />
+
+                <TextView
+                    android:id="@+id/textNombre8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_x="18dp"
+                    android:layout_y="51dp"
+                    android:gravity="center"
+                    android:text="Valoración dada"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/textNombre3"
+                    app:layout_constraintTop_toBottomOf="@+id/textNombre3" />
+
+                <TextView
+                    android:id="@+id/textNombre9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_x="18dp"
+                    android:layout_y="51dp"
+                    android:gravity="center"
+                    android:text="Valoración recibida"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintEnd_toEndOf="@+id/btnMapSel2"
+                    app:layout_constraintTop_toBottomOf="@+id/textNombre3" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="311dp"
+                    android:layout_height="138dp"
+                    android:layout_x="12dp"
+                    android:layout_y="304dp"
+                    android:background="@drawable/rect_txt"
+                    app:layout_constraintStart_toStartOf="@+id/textView24"
+                    app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_x="16dp"
+                    android:layout_y="160dp"
+                    android:gravity="center"
+                    android:text="Establecimiento"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/extraInfo"
+                    app:layout_constraintTop_toBottomOf="@+id/extraInfo" />
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="16dp"
+                    android:layout_y="160dp"
+                    android:gravity="center"
+                    android:text="Tienda especificada por el cliente"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/textView19"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                <TextView
+                    android:id="@+id/textViewDir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_x="18dp"
+                    android:layout_y="104dp"
+                    android:gravity="center"
+                    android:text="Dirección del pedido"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/textNombre"
+                    app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_x="16dp"
+                    android:layout_y="285dp"
+                    android:gravity="center"
+                    android:text="Pedido del cliente"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/textView43"
+                    app:layout_constraintTop_toBottomOf="@+id/textView43" />
+
+                <ScrollView
+                    android:id="@+id/scrollView2"
+                    android:layout_width="302dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_x="16dp"
+                    android:layout_y="310dp"
+                    android:scrollbarTrackVertical="@drawable/scrollbar_custom1"
+                    app:layout_constraintStart_toStartOf="@+id/textView25"
+                    app:layout_constraintTop_toTopOf="@+id/textView25">
+
+                    <TextView
+                        android:id="@+id/txtPedido"
+                        android:layout_width="252dp"
+                        android:layout_height="wrap_content"
+                        android:layout_x="18dp"
+                        android:layout_y="271dp"
+                        android:background="#f5f5f5"
+                        android:scrollbarTrackVertical="@android:color/white"
+                        android:scrollbars="vertical"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/pop_light"
+                        tools:layout_editor_absoluteX="18dp"
+                        tools:layout_editor_absoluteY="278dp" />
+                </ScrollView>
+
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+
+        <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="@drawable/small_lay_custom"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_x="91dp"
+            android:layout_y="18dp"
+            android:fontFamily="@font/pop_med"
+            android:gravity="center"
+            android:text="Información del pedido"
+            android:textColor="#424242"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/imageButton10"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton10"
+            android:layout_width="33dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#f5f5f5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
+    </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

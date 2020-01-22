@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1C2939</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#CE678C</color>
+    <color name="backColor">#121E2C</color>
+    <color name="lightColor">#69F0AE</color>
+    <color name="offColor">#646464</color>
+    <color name="scndOffColor">#808080</color>
+    <color name="whiteBack">#f5f5f5</color>
+    <color name="trueWhite">#ffffff</color>
+    <color name="pastelRed">#FF6961</color>
+</resources>

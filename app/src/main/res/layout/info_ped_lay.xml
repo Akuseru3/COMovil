@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/absLayP"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:id="@+id/swAddp"
+        android:layout_width="match_parent"
+        android:layout_height="575dp"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/extraInfo"
+                    android:layout_width="311dp"
+                    android:layout_height="58dp"
+                    android:background="@drawable/round_txtwh_stroke"
+                    android:ems="10"
+                    android:fontFamily="@font/pop_light"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="6dp"
+                    android:scrollbars="vertical"
+                    android:text="Señales brindadas por el cliente"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/textViewDir2"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDir2" />
+
+                <TextView
+                    android:id="@+id/textViewDir2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_x="18dp"
+                    android:layout_y="104dp"
+                    android:gravity="center"
+                    android:text="Señales extras"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/twLocale"
+                    app:layout_constraintTop_toBottomOf="@+id/twLocale" />
+
+                <TextView
+                    android:id="@+id/twLocale"
+                    android:layout_width="194dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/round_txtwh_stroke"
+                    android:fontFamily="@font/pop_light"
+                    android:paddingLeft="6dp"
+                    android:text="Dirección del pedido"
+                    android:textColor="#424242"
+                    app:layout_constraintStart_toStartOf="@+id/textViewDir"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDir" />
+
+                <Button
+                    android:id="@+id/btnMapSel2"
+                    android:layout_width="105dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/round_btn_grn"
+                    android:fontFamily="@font/pop_med"
+                    android:text="Ver en el mapa"
+                    android:textAllCaps="false"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/twLocale"
+                    app:layout_constraintTop_toTopOf="@+id/twLocale" />
+
+                <TextView
+                    android:id="@+id/textNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_x="18dp"
+                    android:layout_y="51dp"
+                    android:gravity="center"
+                    android:text="Nombre del pedido"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textNombre2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="18dp"
+                    android:layout_y="51dp"
+                    android:gravity="center"
+                    android:text="Pedido 1"
+                    android:textColor="#424242"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/textNombre"
+                    app:layout_constraintTop_toBottomOf="@+id/textNombre" />
+
+                <TextView
+                    android:id="@+id/textNombre3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="18dp"
+                    android:layout_y="51dp"
+                    android:gravity="center"
+                    android:text="Cliente 1"
+                    android:textColor="#424242"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/textNombre4"
+                    app:layout_constraintTop_toBottomOf="@+id/textNombre4" />
+
+                <TextView
+                    android:id="@+id/textNombre4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_x="18dp"
+                    android:layout_y="51dp"
+                    android:gravity="center"
+                    android:text="Nombre del cliente"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/textNombre2"
+                    app:layout_constraintTop_toBottomOf="@+id/textNombre2" />
+
+                <Button
+                    android:id="@+id/btnAgregar"
+                    android:layout_width="311dp"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_x="122dp"
+                    android:layout_y="516dp"
+                    android:background="@drawable/round_btn_grn"
+                    android:fontFamily="@font/pop_med"
+                    android:text="Solicitar pedido"
+                    android:textAllCaps="false"
+                    android:textColor="#424242"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/extraInfo"
+                    app:layout_constraintTop_toBottomOf="@+id/textView25"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="311dp"
+                    android:layout_height="145dp"
+                    android:layout_x="12dp"
+                    android:layout_y="304dp"
+                    android:background="@drawable/rect_txt"
+                    app:layout_constraintStart_toStartOf="@+id/textView24"
+                    app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+                <TextView
+                    android:id="@+id/textViewDir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_x="18dp"
+                    android:layout_y="104dp"
+                    android:gravity="center"
+                    android:text="Dirección del pedido"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/textNombre"
+                    app:layout_constraintTop_toBottomOf="@+id/textNombre3" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_x="16dp"
+                    android:layout_y="285dp"
+                    android:gravity="center"
+                    android:text="Pedido del cliente"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/extraInfo"
+                    app:layout_constraintTop_toBottomOf="@+id/extraInfo" />
+
+                <ScrollView
+                    android:id="@+id/scrollView2"
+                    android:layout_width="306dp"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_x="16dp"
+                    android:layout_y="310dp"
+                    android:scrollbarTrackVertical="@drawable/scrollbar_custom1"
+                    app:layout_constraintStart_toStartOf="@+id/textView25"
+                    app:layout_constraintTop_toTopOf="@+id/textView25">
+
+                    <LinearLayout
+                        android:id="@+id/txtPedido"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </ScrollView>
+
+            </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteBack"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/cpb_grn"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="@drawable/small_lay_custom"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_x="91dp"
+        android:layout_y="18dp"
+        android:fontFamily="@font/pop_med"
+        android:gravity="center"
+        android:text="Información del pedido"
+        android:textColor="#424242"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imageButton10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="33dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#f5f5f5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+</android.support.constraint.ConstraintLayout>

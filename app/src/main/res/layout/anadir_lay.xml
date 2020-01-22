@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/absLayP"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:focusableInTouchMode="true">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/swAddp"
+            android:layout_width="match_parent"
+            android:layout_height="512dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            tools:layout_editor_absoluteX="0dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_x="91dp"
+                    android:layout_y="18dp"
+                    android:fontFamily="@font/pop_med"
+                    android:gravity="center"
+                    android:text="Añadir productos"
+                    android:textColor="#646464"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_x="14dp"
+                    android:layout_y="219dp"
+                    android:gravity="center"
+                    android:text="Cantidad"
+                    android:textColor="#646464"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/txtProduct"
+                    app:layout_constraintTop_toBottomOf="@+id/txtProduct" />
+
+                <EditText
+                    android:id="@+id/txtProduct2"
+                    android:layout_width="311dp"
+                    android:layout_height="24dp"
+                    android:layout_x="14dp"
+                    android:layout_y="240dp"
+                    android:background="@drawable/round_txtwh_stroke"
+                    android:ems="10"
+                    android:fontFamily="@font/pop_light"
+                    android:inputType="number"
+                    android:paddingLeft="6dp"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView39"
+                    app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+                <EditText
+                    android:id="@+id/txtProduct"
+                    android:layout_width="311dp"
+                    android:layout_height="24dp"
+                    android:layout_x="14dp"
+                    android:layout_y="240dp"
+                    android:background="@drawable/round_txtwh_stroke"
+                    android:ems="10"
+                    android:fontFamily="@font/pop_light"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="6dp"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView22"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+                <Button
+                    android:id="@+id/btnAnadirP"
+                    android:layout_width="311dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_x="273dp"
+                    android:layout_y="240dp"
+                    android:background="@drawable/round_btn_grn"
+                    android:fontFamily="@font/pop_med"
+                    android:text="Añadir al pedido"
+                    android:textAllCaps="false"
+                    android:textColor="#646464"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/txtProduct2"
+                    app:layout_constraintTop_toBottomOf="@+id/txtProduct2" />
+
+                <Button
+                    android:id="@+id/btnAgregar"
+                    android:layout_width="311dp"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_x="122dp"
+                    android:layout_y="516dp"
+                    android:background="@drawable/round_btn_grn"
+                    android:fontFamily="@font/pop_med"
+                    android:text="Continuar"
+                    android:textAllCaps="false"
+                    android:textColor="#646464"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView24"
+                    app:layout_constraintTop_toBottomOf="@+id/textView25"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="311dp"
+                    android:layout_height="169dp"
+                    android:layout_x="12dp"
+                    android:layout_y="304dp"
+                    android:background="@drawable/rect_txt"
+                    app:layout_constraintStart_toStartOf="@+id/textView24"
+                    app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_x="16dp"
+                    android:layout_y="160dp"
+                    android:gravity="center"
+                    android:text="Establecimiento"
+                    android:textColor="#646464"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/textView15"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_x="14dp"
+                    android:layout_y="219dp"
+                    android:gravity="center"
+                    android:text="Producto"
+                    android:textColor="#646464"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/pop_light"
+                    app:layout_constraintStart_toStartOf="@+id/tvEstab"
+                    app:layout_constraintTop_toBottomOf="@+id/tvEstab" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_x="16dp"
+                    android:layout_y="285dp"
+                    android:gravity="center"
+                    android:text="Pedido actual"
+                    android:textColor="#646464"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/pop_med"
+                    app:layout_constraintStart_toStartOf="@+id/txtProduct2"
+                    app:layout_constraintTop_toBottomOf="@+id/btnAnadirP" />
+
+                <TextView
+                    android:id="@+id/tvEstab"
+                    android:layout_width="194dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/round_txtwh_stroke"
+                    android:fontFamily="@font/pop_light"
+                    android:paddingLeft="6dp"
+                    android:textColor="#424242"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView19"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                <android.support.v4.widget.NestedScrollView
+                    android:id="@+id/scrollView2"
+                    android:layout_width="306dp"
+                    android:layout_height="164dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_x="16dp"
+                    android:layout_y="310dp"
+                    android:scrollbars="vertical"
+                    app:layout_constraintStart_toStartOf="@+id/textView25"
+                    app:layout_constraintTop_toTopOf="@+id/textView25">
+
+                    <LinearLayout
+                        android:id="@+id/txtPedido"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"></LinearLayout>
+                </android.support.v4.widget.NestedScrollView>
+
+                <Button
+                    android:id="@+id/Stab"
+                    android:layout_width="108dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/round_btn_grn"
+                    android:fontFamily="@font/pop_med"
+                    android:text="Seleccionar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/offColor"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/tvEstab"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:background="@drawable/small_lay_custom"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="8dp"
+            android:layout_x="91dp"
+            android:layout_y="18dp"
+            android:fontFamily="@font/pop_bold"
+            android:gravity="center"
+            android:text="Nuevo pedido"
+            android:textColor="#646464"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_x="0dp"
+            android:layout_y="560dp"
+            android:background="@drawable/small_lay_custom_wh"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnSegui"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="14dp"
+            android:layout_x="17dp"
+            android:layout_y="564dp"
+            android:background="#ffffff"
+            android:alpha=".8"
+            android:scaleType="fitCenter"
+            android:tint="#646464"
+            app:layout_constraintBottom_toBottomOf="@+id/textView17"
+            app:layout_constraintStart_toStartOf="@+id/textView17"
+            app:srcCompat="@drawable/ic_shopping_bag_solid" />
+
+        <ImageButton
+            android:id="@+id/btnPerfil"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="14dp"
+            android:layout_x="287dp"
+            android:layout_y="562dp"
+            android:background="#ffffff"
+            android:alpha=".8"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_user_solid"
+            android:tint="#646464"
+            app:layout_constraintBottom_toBottomOf="@+id/textView17"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnMas"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="14dp"
+            android:layout_x="152dp"
+            android:layout_y="560dp"
+            android:background="#ffffff"
+            android:scaleType="fitCenter"
+            android:tint="#69F0AE"
+            app:layout_constraintBottom_toBottomOf="@+id/textView17"
+            app:layout_constraintEnd_toStartOf="@+id/btnPerfil"
+            app:layout_constraintStart_toEndOf="@+id/btnSegui"
+            app:srcCompat="@drawable/ic_shopping_cart_solid" />
+
+    </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

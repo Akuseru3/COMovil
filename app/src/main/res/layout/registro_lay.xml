@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:focusableInTouchMode="true"
+    tools:context=".CarryOn.VistaGeneral.Register">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textContra2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Repita su contraseña"
+                android:textColor="#424242"
+                android:textSize="16sp"
+                app:fontFamily="@font/pop_light"
+                app:layout_constraintStart_toStartOf="@+id/editTextPass"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPass" />
+
+            <EditText
+                android:id="@+id/editTextPass2"
+                android:layout_width="286dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/textContra"
+                android:background="@drawable/round_txt"
+                android:ems="10"
+                android:fontFamily="@font/pop_light"
+                android:inputType="textPassword"
+                android:paddingLeft="8dp"
+                android:textColor="#424242"
+                android:textColorHint="#727272"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textContra2"
+                app:layout_constraintTop_toBottomOf="@+id/textContra2"
+                tools:layout_conversion_absoluteHeight="32dp"
+                tools:layout_conversion_absoluteWidth="370dp" />
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="33dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="#f5f5f5"
+                android:textColor="#69f0ae"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back" />
+
+            <EditText
+                android:id="@+id/editTextPass"
+                android:layout_width="286dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/textContra"
+                android:background="@drawable/round_txt"
+                android:ems="10"
+                android:fontFamily="@font/pop_light"
+                android:inputType="textPassword"
+                android:paddingLeft="8dp"
+                android:textColor="#424242"
+                android:textColorHint="#727272"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textContra"
+                app:layout_constraintTop_toBottomOf="@+id/textContra"
+                tools:layout_conversion_absoluteHeight="32dp"
+                tools:layout_conversion_absoluteWidth="370dp" />
+
+            <EditText
+                android:id="@+id/editTextCorreo"
+                android:layout_width="286dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/textCorreo"
+                android:background="@drawable/round_txt"
+                android:ems="10"
+                android:fontFamily="@font/pop_light"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:textColor="#424242"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textCorreo"
+                app:layout_constraintTop_toBottomOf="@+id/textCorreo"
+                tools:layout_conversion_absoluteHeight="32dp"
+                tools:layout_conversion_absoluteWidth="370dp" />
+
+            <EditText
+                android:id="@+id/editTextTelefono2"
+                android:layout_width="286dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/textTelefono"
+                android:background="@drawable/round_txt"
+                android:ems="10"
+                android:fontFamily="@font/pop_light"
+                android:inputType="number"
+                android:paddingLeft="8dp"
+                android:textColor="#424242"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textTelefono"
+                app:layout_constraintTop_toBottomOf="@+id/textTelefono"
+                tools:layout_conversion_absoluteHeight="32dp"
+                tools:layout_conversion_absoluteWidth="370dp" />
+
+            <EditText
+                android:id="@+id/editTextNombre"
+                android:layout_width="286dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/textNombre"
+                android:background="@drawable/round_txt"
+                android:ems="10"
+                android:fontFamily="@font/pop_light"
+                android:inputType="textPersonName"
+                android:paddingLeft="8dp"
+                android:textColor="#424242"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textNombre"
+                app:layout_constraintTop_toBottomOf="@+id/textNombre"
+                tools:layout_conversion_absoluteHeight="32dp"
+                tools:layout_conversion_absoluteWidth="370dp" />
+
+            <EditText
+                android:id="@+id/editTextApellidos"
+                android:layout_width="286dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/textApellidos"
+                android:background="@drawable/round_txt"
+                android:ems="10"
+                android:fontFamily="@font/pop_light"
+                android:inputType="textPersonName"
+                android:paddingLeft="8dp"
+                android:textColor="#424242"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/textApellidos"
+                app:layout_constraintTop_toBottomOf="@+id/textApellidos"
+                tools:layout_conversion_absoluteHeight="32dp"
+                tools:layout_conversion_absoluteWidth="370dp" />
+
+            <TextView
+                android:id="@+id/textApellidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextNombre"
+                android:layout_marginTop="8dp"
+                android:text="Apellidos"
+                android:textColor="#424242"
+                android:textSize="16sp"
+                app:fontFamily="@font/pop_light"
+                app:layout_constraintStart_toStartOf="@+id/textNombre"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNombre" />
+
+            <Button
+                android:id="@+id/btnCrear"
+                android:layout_width="286dp"
+                android:layout_height="38dp"
+                android:layout_below="@id/editTextPass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/round_btn_grn"
+                android:fontFamily="@font/pop_med"
+                android:text="Crear Cuenta"
+                android:textAllCaps="false"
+                android:textColor="#424242"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPass2" />
+
+            <EditText
+                android:id="@+id/editTextD"
+                android:layout_width="82dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/textFecha"
+                android:background="@drawable/round_txt"
+                android:ems="10"
+                android:hint="Día"
+                android:inputType="number"
+                android:fontFamily="@font/pop_light"
+                android:paddingLeft="14dp"
+                android:textColor="#424242"
+                android:textColorHint="#727272"
+                app:layout_constraintStart_toStartOf="@+id/textFecha"
+                app:layout_constraintTop_toBottomOf="@+id/textFecha" />
+
+            <EditText
+                android:id="@+id/editTextA"
+                android:layout_width="82dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/textFecha"
+                android:layout_toRightOf="@id/editTextM"
+                android:background="@drawable/round_txt"
+                android:ems="10"
+                android:hint="Año"
+                android:fontFamily="@font/pop_light"
+                android:inputType="number"
+                android:paddingLeft="14dp"
+                android:textColor="#424242"
+                android:textColorHint="#727272"
+                app:layout_constraintEnd_toEndOf="@+id/editTextApellidos"
+                app:layout_constraintTop_toBottomOf="@+id/textFecha" />
+
+            <EditText
+                android:id="@+id/editTextM"
+                android:layout_width="82dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/textFecha"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_toRightOf="@id/editTextD"
+                android:background="@drawable/round_txt"
+                android:ems="10"
+                android:hint="Mes"
+                android:fontFamily="@font/pop_light"
+                android:inputType="number"
+                android:paddingLeft="14dp"
+                android:textColor="#424242"
+                android:textColorHint="#727272"
+                app:layout_constraintEnd_toStartOf="@+id/editTextA"
+                app:layout_constraintStart_toEndOf="@+id/editTextD"
+                app:layout_constraintTop_toBottomOf="@+id/textFecha" />
+
+
+            <TextView
+                android:id="@+id/textCorreo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Correo Electronico"
+                android:textColor="#424242"
+                android:textSize="16sp"
+                app:fontFamily="@font/pop_light"
+                app:layout_constraintStart_toStartOf="@+id/editTextTelefono2"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTelefono2" />
+
+            <TextView
+                android:id="@+id/textContra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Contraseña"
+                android:textColor="#424242"
+                android:textSize="16sp"
+                app:fontFamily="@font/pop_light"
+                app:layout_constraintStart_toStartOf="@+id/editTextCorreo"
+                app:layout_constraintTop_toBottomOf="@+id/editTextCorreo" />
+
+            <TextView
+                android:id="@+id/textTelefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextD"
+                android:layout_marginTop="8dp"
+                android:text="Teléfono"
+                android:textColor="#424242"
+                android:textSize="16sp"
+                app:fontFamily="@font/pop_light"
+                app:layout_constraintStart_toStartOf="@+id/textFecha"
+                app:layout_constraintTop_toBottomOf="@+id/editTextD" />
+
+            <TextView
+                android:id="@+id/textFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextApellidos"
+                android:layout_marginTop="8dp"
+                android:text="Fecha de Nacimiento"
+                android:textColor="#424242"
+                android:textSize="16sp"
+                app:fontFamily="@font/pop_light"
+                app:layout_constraintStart_toStartOf="@+id/textApellidos"
+                app:layout_constraintTop_toBottomOf="@+id/editTextApellidos" />
+
+            <TextView
+                android:id="@+id/textNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textReg"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Nombre"
+                android:textColor="#424242"
+                android:textSize="16sp"
+                app:fontFamily="@font/pop_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.100"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textReg" />
+
+            <TextView
+                android:id="@+id/textReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="14dp"
+                android:text="Ingresa los siguientes datos"
+                android:textColor="#424242"
+                android:textSize="18sp"
+                app:fontFamily="@font/pop_med"
+                app:layout_constraintStart_toEndOf="@+id/btnBack"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
