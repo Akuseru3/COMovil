@@ -129,7 +129,7 @@ public class EditPerfilC extends AppCompatActivity {
         protected Cursor doInBackground(Object... params) {
             try
             {
-                GmailAPI.sendPassMail(correo,actualCode);
+                GmailAPI.sendEndMail(correo,actualCode,"RataKevin","8500");
                 return null;
             }
             catch (Exception e)

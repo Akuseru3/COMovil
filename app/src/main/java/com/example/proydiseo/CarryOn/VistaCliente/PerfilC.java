@@ -2,6 +2,7 @@ package com.example.proydiseo.CarryOn.VistaCliente;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
@@ -13,6 +14,7 @@ import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -29,11 +31,26 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.proydiseo.CarryOn.Modelo.Conexion;
+import com.example.proydiseo.CarryOn.Modelo.Estadisticas;
 import com.example.proydiseo.CarryOn.Modelo.ExtraTools;
 import com.example.proydiseo.R;
 import com.example.proydiseo.CarryOn.Modelo.UserData;
 import com.example.proydiseo.CarryOn.Controlador.Usuario;
 import com.example.proydiseo.CarryOn.VistaGeneral.MainActivity;
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
+import com.github.mikephil.charting.listener.ChartTouchListener;
+import com.github.mikephil.charting.utils.ColorTemplate;
+
+import java.util.ArrayList;
 
 public class PerfilC extends AppCompatActivity {
     private Button btnCerrarSesion;
@@ -47,6 +64,14 @@ public class PerfilC extends AppCompatActivity {
     private LinearLayout all;
     private String correo;
     private Usuario actual;
+    private String total;
+    ArrayList<BarEntry> mesMontoEntries;
+    ArrayList<BarEntry> pedidosMes;
+    ArrayList<BarEntry> valoracionMes;
+    ArrayList pieEntries = new ArrayList();
+    ArrayList names = new ArrayList();
+    ArrayList<String> topEntries = new ArrayList();
+    ArrayList<ArrayList<String>> listEntries = new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -149,6 +174,40 @@ public class PerfilC extends AppCompatActivity {
         @Override
         protected void onPostExecute(Cursor result) {
             fillUserInfo();
+        }
+    }
+
+    private class loadEstadisticas extends AsyncTask<Object, Object, Cursor> {
+
+        @Override
+        protected Cursor doInBackground(Object... params) {
+            try
+            {
+                String result = Estadisticas.getMonto(correo);
+                total = result;
+                ArrayList<BarEntry> entries = Estadisticas.getMontoMes(correo,"2020");
+                mesMontoEntries = entries;
+                ArrayList<BarEntry> entries2 = Estadisticas.cantidadPedidosMes(correo,"2020");
+                pedidosMes = entries2;
+                ArrayList<BarEntry> entries3 = Estadisticas.valoracionPromedioMes(correo,"2020");
+                valoracionMes = entries3;
+                ArrayList<ArrayList<String>> pieData= Estadisticas.establecimientosMasUsados(correo);
+                for(int i=0;i<pieData.size();i++){
+                    names.add(pieData.get(i).get(2));
+                    pieEntries.add(new Entry(Integer.parseInt(pieData.get(i).get(1)),Integer.parseInt(pieData.get(i).get(0))));
+                }
+                listEntries = Estadisticas.topTransportistas(correo);
+                return null;
+            }
+            catch (Exception e)
+            { e.printStackTrace();
+                return null;}
+
+        }
+
+        @Override
+        protected void onPostExecute(Cursor result) {
+            cargaStatistics();
         }
     }
 
@@ -366,6 +425,239 @@ public class PerfilC extends AppCompatActivity {
         btnCom.setBackgroundColor(this.getResources().getColor(R.color.trueWhite));
         btnHisto.setBackgroundColor(this.getResources().getColor(R.color.trueWhite));
         btnStats.setBackgroundColor(this.getResources().getColor(R.color.lightColor));
+        new loadEstadisticas().execute();
+    }
+
+    private void cargaStatistics(){
+
+
+
+        int nameId = View.generateViewId();
+        int costId = View.generateViewId();
+        int chartId = View.generateViewId();
+        int chart2Id = View.generateViewId();
+        int chart3Id = View.generateViewId();
+        int chart4Id = View.generateViewId();
+        int topLay = View.generateViewId();
+
+        ConstraintLayout lay = new ConstraintLayout(this);
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+        lay.setLayoutParams(params);
+        ViewGroup.LayoutParams rlp = lay.getLayoutParams();
+
+        rlp.width = ViewGroup.LayoutParams.MATCH_PARENT;
+        rlp.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+        lay.setBackground(ContextCompat.getDrawable(this,R.drawable.small_lay_custom_wh));
+
+        TextView name = new TextView(this);
+        name.setId(nameId);
+        name.setText("Monto total usado en la aplicación");
+        Typeface typeface2 = ResourcesCompat.getFont(this, R.font.pop_light);
+        name.setTypeface(typeface2);
+        name.setTextColor(this.getResources().getColor(R.color.offColor));
+        name.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+        lay.addView(name);
+
+        TextView cost = new TextView(this);
+        cost.setId(costId);
+        if(total!= null){
+            cost.setText(total);
+        }
+        else{
+            cost.setText("No ha consumido");
+        }
+        Typeface typeface3 = ResourcesCompat.getFont(this, R.font.pop_light);
+        cost.setTypeface(typeface3);
+        cost.setTextColor(this.getResources().getColor(R.color.offColor));
+        cost.setTextSize(TypedValue.COMPLEX_UNIT_SP,14);
+        lay.addView(cost);
+
+        BarChart chart = new BarChart(this);
+        chart.setDescription("");
+        chart.setId(chartId);
+        chart.setLayoutParams(new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.MATCH_PARENT,
+                RelativeLayout.LayoutParams.MATCH_PARENT));
+
+        ViewGroup.LayoutParams rlp2 = chart.getLayoutParams();
+
+        rlp2.width = ViewGroup.LayoutParams.MATCH_PARENT;
+        rlp2.height = 1000;
+
+
+        BarDataSet barDataset = new BarDataSet(mesMontoEntries,"Montos");
+
+        ArrayList<String> dates = new ArrayList<>();
+        dates.add("Enero");
+        dates.add("Febrero");
+        dates.add("Marzo");
+        dates.add("Abril");
+        dates.add("Mayo");
+        dates.add("Junio");
+        dates.add("Julio");
+        dates.add("Agosto");
+        dates.add("Setiembre");
+        dates.add("Octubre");
+        dates.add("Noviembre");
+        dates.add("Diciembre");
+
+        BarData data = new BarData(dates,barDataset);
+        barDataset.setColor(Color.rgb(105, 240, 175));
+        barDataset.setValueTextSize(10);
+        barDataset.setValueTypeface(typeface2);
+        chart.setData(data);
+
+        chart.setTouchEnabled(true);
+        chart.setDragEnabled(true);
+        chart.setScaleEnabled(true);
+        chart.getXAxis().setLabelRotationAngle(60);
+        chart.getXAxis().setLabelsToSkip(0);
+
+        lay.addView(chart); /*ver aqui*/
+        PieChart chart3 = new PieChart(this);
+        chart3.setDescription("");
+        chart3.setId(chart3Id);
+        chart3.setLayoutParams(new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.MATCH_PARENT,
+                RelativeLayout.LayoutParams.MATCH_PARENT));
+
+        ViewGroup.LayoutParams rlp4 = chart3.getLayoutParams();
+
+        rlp4.width = ViewGroup.LayoutParams.MATCH_PARENT;
+        rlp4.height = 1000;
+
+        PieDataSet dataSet = new PieDataSet(pieEntries, "Establecimientos usados");
+        dataSet.setValueTextSize(12);
+        dataSet.setValueTypeface(typeface2);
+        PieData pieData = new PieData(names, dataSet);
+        chart3.setData(pieData);
+        dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+        chart3.animateXY(5000, 5000);
+        lay.addView(chart3);
+
+        BarChart chart2 = new BarChart(this);
+        chart2.setDescription("");
+        chart2.setId(chart2Id);
+        chart2.setLayoutParams(new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.MATCH_PARENT,
+                RelativeLayout.LayoutParams.MATCH_PARENT));
+
+        ViewGroup.LayoutParams rlp3 = chart2.getLayoutParams();
+
+        rlp3.width = ViewGroup.LayoutParams.MATCH_PARENT;
+        rlp3.height = 1000;
+
+
+        BarDataSet barDataset2 = new BarDataSet(pedidosMes,"Veces usados");
+        barDataset2.setColor(Color.rgb(105, 240, 175));
+        barDataset2.setValueTextSize(10);
+        barDataset2.setValueTypeface(typeface2);
+        BarData data2 = new BarData(dates,barDataset2);
+        chart2.setData(data2);
+
+        chart2.setTouchEnabled(true);
+        chart2.setDragEnabled(true);
+        chart2.setScaleEnabled(true);
+        chart2.getXAxis().setLabelRotationAngle(60);
+        chart2.getXAxis().setLabelsToSkip(0);
+
+        lay.addView(chart2);/*ver aqui*/
+
+
+        LinearLayout top = new LinearLayout(this);
+        top.setId(topLay);
+        LinearLayout.LayoutParams topParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+
+        top.setLayoutParams(topParams);
+        ViewGroup.LayoutParams topRlp = top.getLayoutParams();
+
+        topRlp.width = ViewGroup.LayoutParams.MATCH_PARENT;
+        topRlp.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+        top.setBackground(ContextCompat.getDrawable(this,R.drawable.small_lay_custom_wh));
+
+        int count=0;
+        for(int i=0;i<listEntries.size();i++){
+            TextView text = new TextView(this);
+            text.setText(listEntries.get(i).get(0)+"-"+listEntries.get(i).get(1)+"-"+listEntries.get(i).get(2)+"|");
+            text.setTypeface(typeface2);
+            text.setTextColor(this.getResources().getColor(R.color.offColor));
+            text.setTextSize(TypedValue.COMPLEX_UNIT_SP,16);
+
+
+            RelativeLayout.LayoutParams textParams = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT);
+            if(i!=0)
+                textParams.addRule(RelativeLayout.BELOW,count);
+            text.setLayoutParams(textParams);
+            ViewGroup.LayoutParams textRlp = text.getLayoutParams();
+            //textRlp.width = ViewGroup.LayoutParams.MATCH_PARENT;
+
+            count= View.generateViewId();
+
+            text.setId(count);
+
+            top.addView(text);
+        }
+
+
+        lay.addView(top);
+
+        BarChart chart4 = new BarChart(this);
+        chart4.setDescription("");
+        chart4.setId(chart4Id);
+        chart4.setLayoutParams(new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.MATCH_PARENT,
+                RelativeLayout.LayoutParams.MATCH_PARENT));
+
+        ViewGroup.LayoutParams rlp5 = chart4.getLayoutParams();
+
+        rlp5.width = ViewGroup.LayoutParams.MATCH_PARENT;
+        rlp5.height = 1000;
+
+
+        BarDataSet barDataset3 = new BarDataSet(valoracionMes,"Cantidad de valoracion"); /*come back*/
+        barDataset3.setColor(Color.rgb(105, 240, 175));
+        barDataset3.setValueTextSize(10);
+        barDataset3.setValueTypeface(typeface2);
+        BarData data3 = new BarData(dates,barDataset3);
+        chart4.setData(data3);
+
+        chart4.setTouchEnabled(true);
+        chart4.setDragEnabled(true);
+        chart4.setScaleEnabled(true);
+        chart4.getXAxis().setLabelRotationAngle(60);
+        chart4.getXAxis().setLabelsToSkip(0);
+
+        lay.addView(chart4);/*ver aqui*/
+
+
+        ConstraintSet cs = new ConstraintSet();
+        cs.clone(lay);
+        cs.connect(nameId,ConstraintSet.TOP,lay.getId(),ConstraintSet.TOP,15);
+        cs.connect(nameId,ConstraintSet.LEFT,lay.getId(),ConstraintSet.LEFT,15);
+        cs.connect(costId,ConstraintSet.TOP,nameId,ConstraintSet.BOTTOM,15);
+        cs.connect(costId,ConstraintSet.LEFT,lay.getId(),ConstraintSet.LEFT,15);
+        cs.connect(chartId,ConstraintSet.TOP,costId,ConstraintSet.BOTTOM,50);
+        cs.connect(chartId,ConstraintSet.LEFT,lay.getId(),ConstraintSet.LEFT,0);
+        cs.connect(chart2Id,ConstraintSet.TOP,chartId,ConstraintSet.BOTTOM,50);
+        cs.connect(chart2Id,ConstraintSet.LEFT,lay.getId(),ConstraintSet.LEFT,0);
+        cs.connect(chart3Id,ConstraintSet.TOP,chart2Id,ConstraintSet.BOTTOM,50);
+        cs.connect(chart3Id,ConstraintSet.LEFT,lay.getId(),ConstraintSet.LEFT,0);
+        cs.connect(topLay,ConstraintSet.TOP,chart3Id,ConstraintSet.BOTTOM,50);
+        cs.connect(topLay,ConstraintSet.LEFT,lay.getId(),ConstraintSet.LEFT,0);
+        cs.connect(chart4Id,ConstraintSet.TOP,topLay,ConstraintSet.BOTTOM,50);
+        cs.connect(chart4Id,ConstraintSet.LEFT,lay.getId(),ConstraintSet.LEFT,0);
+        cs.applyTo(lay);
+
+
+        all.addView(lay);
+
     }
 
     public void fixLayouts(){

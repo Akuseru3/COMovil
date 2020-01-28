@@ -156,6 +156,7 @@ public class EditPerfilT extends AppCompatActivity {
             try
             {
                 GmailAPI.sendPassMail(correo,actualCode);
+
                 return null;
             }
             catch (Exception e)
